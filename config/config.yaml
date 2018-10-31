@@ -1,0 +1,4 @@
+addr: :9000
+
+dsn: "root:@tcp(127.0.0.1:3306)/admin?charset=utf8&parseTime=True&loc=Local"
+max_idle_conn: 100
