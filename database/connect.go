@@ -3,8 +3,8 @@ package database
 import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/moell-peng/gin-gorm-example/models"
-	"github.com/moell-peng/gin-gorm-example/config"
+	"gin-gorm-example/models"
+	"gin-gorm-example/config"
 )
 
 

@@ -1,9 +1,5 @@
 # Gin + Gorm 的 RESTful 实例
 
-安装依赖:
-```
-govendor sync
-```
 
 编辑 config/config.yaml 配置数据库:
 ```

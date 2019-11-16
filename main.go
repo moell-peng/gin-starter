@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/moell-peng/gin-gorm-example/routes"
-	"github.com/moell-peng/gin-gorm-example/database"
-	"github.com/moell-peng/gin-gorm-example/config"
+	"gin-gorm-example/routes"
+	"gin-gorm-example/database"
+	"gin-gorm-example/config"
 	"fmt"
 )
 

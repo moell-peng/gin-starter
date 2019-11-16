@@ -2,8 +2,8 @@ package controllers
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/moell-peng/gin-gorm-example/models"
-	"github.com/moell-peng/gin-gorm-example/database"
+	"gin-gorm-example/models"
+	"gin-gorm-example/database"
 	"net/http"
 	"crypto/md5"
 	"encoding/hex"

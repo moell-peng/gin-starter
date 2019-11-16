@@ -2,7 +2,7 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/moell-peng/gin-gorm-example/controllers"
+	"gin-gorm-example/controllers"
 )
 
 func InitRouter() *gin.Engine {
