@@ -25,10 +25,10 @@ func (a *AdminUser) Store(c *gin.Context) {
 	var request CreateRequest
 
 	if err := c.ShouldBind(&request); err == nil {
-		var count int
+		var count int64
 		database.DB.Model(&models.AdminUser{}).Where("username = ?", request.Username).Count(&count)
 
-		if (count > 0) {
+		if count > 0 {
 			a.JsonFail(c, http.StatusBadRequest, "用户名已存在")
 			return
 		}

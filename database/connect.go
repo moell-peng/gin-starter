@@ -1,8 +1,8 @@
 package database
 
 import (
-	"github.com/jinzhu/gorm"
-	_ "github.com/go-sql-driver/mysql"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
 	"gin-gorm-example/models"
 	"gin-gorm-example/config"
 )
@@ -12,12 +12,11 @@ var  DB *gorm.DB
 
 func InitDB() (*gorm.DB, error) {
 	conf := config.Get()
-	db, err := gorm.Open("mysql", conf.DSN)
+	db, err := gorm.Open(mysql.Open(conf.DSN),&gorm.Config{})
 
 	if err == nil {
-		db.DB().SetMaxIdleConns(conf.MaxIdleConn)
 		DB = db
-		db.AutoMigrate(&models.AdminUser{})
+		err := db.AutoMigrate(&models.AdminUser{})
 		return db, err
 	}
 	return nil, err

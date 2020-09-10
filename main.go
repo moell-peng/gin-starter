@@ -13,12 +13,11 @@ func main() {
 		return
 	}
 
-	db, err := database.InitDB()
+	_, err := database.InitDB()
 	if err != nil {
 		fmt.Println("err open databases")
 		return
 	}
-	defer db.Close()
 
 	router := routes.InitRouter()
 	router.Run(config.Get().Addr)
