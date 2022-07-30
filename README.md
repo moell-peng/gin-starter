@@ -1,5 +1,5 @@
 # Gin Starter
-基于`gin`和`gorm`构建的一个RESTful 实例。显示JWT认证，并提供生成CURD代码的`moc`命令。
+基于`gin`和`gorm`构建的一个RESTful实例。实现JWT认证，并提供生成CURD代码的`moc`命令。
 
 ## 如何运行
 创建一个`starter`的数据库，编辑 config/config.yaml 配置数据库:
