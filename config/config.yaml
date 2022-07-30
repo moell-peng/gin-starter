@@ -1,4 +1,16 @@
 addr: :9000
+gin_mode: "debug"
+#gin_mode: "release"
 
-dsn: "root:@tcp(127.0.0.1:3306)/admin?charset=utf8mb4&parseTime=True&loc=Local"
+dsn: "root:@tcp(127.0.0.1:3306)/starter?charset=utf8mb4&parseTime=True&loc=Local"
 max_idle_conn: 100
+sql_debug: true
+
+jwt_secret: "your secret"
+jwt_expire_day: 100
+
+redis_host: "127.0.0.1:6379"
+redis_password:
+redis_max_idle: 30
+redis_active: 30
+redis_idle_timeout: 200
