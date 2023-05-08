@@ -1,4 +1,4 @@
-package api
+package handler
 
 import (
 	"fmt"
@@ -40,7 +40,7 @@ func GenApi(name string, appDir string, msrDir string) error {
 	return util.CodeTemplateConversion(&util.CodeGenParams{
 		Name:     name,
 		Template: Template,
-		SavePath: fmt.Sprintf("./internal/%s/api", data["AppDir"]),
+		SavePath: fmt.Sprintf("./internal/%s/handler", data["AppDir"]),
 		Data:     data,
 	})
 }

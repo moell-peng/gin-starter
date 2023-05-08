@@ -1,4 +1,4 @@
-package api
+package handler
 
 var Template = `package api
 

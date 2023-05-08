@@ -2,7 +2,7 @@ package curd
 
 import (
 	"github.com/urfave/cli/v2"
-	"moell/internal/moc/api"
+	"moell/internal/moc/handler"
 	"moell/internal/moc/model"
 	"moell/internal/moc/repository"
 	"moell/internal/moc/service"
@@ -17,7 +17,7 @@ func Command(c *cli.Context) error {
 		msrDir = appDir
 	}
 
-	if err := api.GenApi(name, msrDir, appDir); err != nil {
+	if err := handler.GenApi(name, msrDir, appDir); err != nil {
 		return err
 	}
 

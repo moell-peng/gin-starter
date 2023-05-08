@@ -3,8 +3,8 @@ package main
 import (
 	"github.com/urfave/cli/v2"
 	"log"
-	"moell/internal/moc/api"
 	"moell/internal/moc/curd"
+	"moell/internal/moc/handler"
 	"moell/internal/moc/model"
 	"moell/internal/moc/repository"
 	"moell/internal/moc/service"
@@ -62,7 +62,7 @@ func main() {
 						DefaultText: "app",
 					},
 				},
-				Action: api.Command,
+				Action: handler.Command,
 			},
 			{
 				Name:  "model",
